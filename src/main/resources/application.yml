@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: telegramBot
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+common:
+  debt-calculation-bot:
+    botToken: ${telegramToken}
+    name: debtCalculationBot
