@@ -62,11 +62,12 @@ public class MyBot extends TelegramLongPollingBot {
             response = "Приветствую, бот знает много цитат. Жми /get, чтобы получить случайную из них";
         } else if (textMsg.equals(Const.MessageUser.GET_COMMAND)) {
             response = storage.getPhrase();
+        } else if (textMsg.equalsIgnoreCase("хочу")) {
+            response = "вот ваша бесплатная консультация";
         } else {
             return "сообщение не распознано";
         }
 
         return response;
     }
-
 }

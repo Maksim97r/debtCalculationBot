@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import ru.bot.telegram.configuration.CommonProperties;
 
 @SpringBootApplication
-//@EnableConfigurationProperties(CommonProperties.class)
+@EnableConfigurationProperties(CommonProperties.class)
 public class TelegramApplication {
 
 	public static void main(String[] args) {
