@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="1" author="Maxim">
+        <sql>
+            create table credit_category
+            (
+                debt        numeric(38, 2),
+                id          integer not null,
+                user_id     integer,
+                credit_name varchar(255),
+                primary key (id)
+            )
+        </sql>
+    </changeSet>
+</databaseChangeLog>

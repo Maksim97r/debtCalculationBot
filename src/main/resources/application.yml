@@ -4,6 +4,20 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
+    hikari:
+      driver-class-name: org.postgresql.Driver
+      schema: telegrambot
+
+#TODO: использовать потом Liquibase
+  liquibase:
+    change-log: classpath:liquibase/v.1.0.0/change-log.xml
+    enabled: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
 
 common:
   debt-calculation-bot:

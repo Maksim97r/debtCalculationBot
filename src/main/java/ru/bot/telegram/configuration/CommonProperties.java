@@ -1,6 +1,7 @@
 package ru.bot.telegram.configuration;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -15,8 +16,8 @@ public class CommonProperties {
 
     @Valid
     public record TelegramBot(
-            String botToken,
-            String name
+            @NotNull String botToken,
+            @NotNull String name
     ) {
 
     }
